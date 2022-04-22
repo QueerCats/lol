@@ -276,7 +276,7 @@ for i,Part in pairs(OriginalRigDescendants) do
 			local BodyVelocity = Instance.new("BodyVelocity",Part)
 			BodyVelocity.MaxForce = Vector3.new(math.huge,math.huge,math.huge); BodyVelocity.P = math.huge; BodyVelocity.Velocity = Velocity
 			local BodyAngularVelocity = Instance.new("BodyAngularVelocity",Part)
-			BodyAngularVelocity.MaxTorque = Vector3.new(math.huge,math.huge,math.huge); BodyAngularVelocity.P = math.huge; BodyAngularVelocity.AngularVelocity = Vector3.new(8768899689076,87688996890760,8768899689076)
+			BodyAngularVelocity.MaxTorque = Vector3.new(math.huge,math.huge,math.huge); BodyAngularVelocity.P = math.huge; BodyAngularVelocity.AngularVelocity = Vector3.new(0,0,0)
 
 			Part.Massless = true
 			Part.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
