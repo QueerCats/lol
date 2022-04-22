@@ -77,15 +77,6 @@ if Global.FakeGod and RigType == Enum.HumanoidRigType.R6 then
 	Global.GodMode = false 
 end
 
-local function Notify(title,duration)
-	if Global.Notification then
-		notification({
-			Text = title,
-			Duration = duration
-		})
-	end
-end
-
 if Global.Network then
 	Player.MaximumSimulationRadius=1000
 	sethiddenproperty(Player,"SimulationRadius",1000)
