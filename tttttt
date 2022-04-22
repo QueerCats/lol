@@ -48,7 +48,6 @@ if Global.Velocity == nil then Global.Velocity = -25.05 end
 if Global.Collisions == nil then Global.Collisions = true end
 if Global.Network == nil then Global.Network = true end
 if Global.Claim2 == nil then Global.Claim2 = false end
-if Global.Notification == nil then Global.Notification = true end
 if Global.AntiSleep == nil then Global.AntiSleep = false end
 if Global.MovementVelocity == nil then Global.MovementVelocity = false end
 if Global.ArtificialHeartBeat == nil then Global.ArtificialHeartBeat = true end
@@ -223,7 +222,6 @@ if Global.GodMode then
 		if OriginalRig:FindFirstChild("Neck",true) then 
 			OriginalRig.Humanoid:ChangeState(15)
 			neck.Parent = nil
-			Notify("Permadeath On",6) 
 		end
 	end)
 end
@@ -256,7 +254,6 @@ if Global.Claim2 then
 	OriginalRig.HumanoidRootPart.CFrame = FoundPos
 	Character.Head.CFrame = FoundPos
 	Character.Head.Anchored = true
-	Notify("Claim2; Found Pos",6)
 end
 
 Asset.Spawn(function()
@@ -326,7 +323,6 @@ for i,Part in pairs(OriginalRigDescendants) do
 		end
 	end)
 end
-Notify("Net Claimed",6)
 
 
 
@@ -556,5 +552,3 @@ Player.CharacterAdded:Connect(function()
 		v:Disconnect()
 	end
 end) 
-
-Notify("Script loaded in " .. tostring(tick() - TickTest) .. " Seconds",5)
